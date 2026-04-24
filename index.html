@@ -1,0 +1,35 @@
+
+<style>
+    #log {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        height: 200px;
+        overflow-y: auto;
+        font-family: monospace;
+        background-color: #f9f9f9;
+    }
+    
+    .log-entry {
+        margin-bottom: 5px;
+    }
+    
+    .sent {
+        color: rgb(132, 202, 244);
+    }
+    
+    .received {
+        color: rgb(110, 170, 110);
+    }
+</style>
+
+<form onsubmit="sendRequest(event)">
+    <input type="checkbox" id="contextId"> Context ID</input>
+    <input type="checkbox" id="visitorId"> Visitor ID</input>
+    
+    <button id="send" type="submit" >Send Request</button>
+</form>
+
+<div id="log"></div>
+
+<script src="./script.js"></script>
